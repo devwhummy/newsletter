@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    /* Layout */
+    --mobile: 375px;
+    --desktop: 1440px;
+
+    /* Colors */
+    --tomato: hsl(4, 100%, 67%);
+
+    /* Neutral */
+    --darkSlateGrey: hsl(234, 29%, 20%);
+    --charcoalGrey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+p {
+    padding: 10px 0;
+}
+
+.img img{
+    width: 100%;
+}
+
+.sign-up-mobile {
+    display: block;
+}
+
+.sign-up-desktop {
+    display: none;
+}
+
+.info {
+    padding: 50px 25px;
+}
+
+.info-check-text img {
+    margin-right: 10px;
+}
+
+input, .btn {
+    display: block;
+    width: 100%;
+    margin: 14px 0;
+    font-size: 1rem;
+    padding: 10px 10px 10px 16px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+input {
+    outline: none;
+    border: 2px solid var(--grey);
+}
+
+.btn {
+    border: 0;
+    background-color: var(--darkSlateGrey);
+    color: var(--white);
+}
+
+@media screen and (min-width: 376px) {
+    body {
+        padding: 3rem 5rem;
+        flex-direction: row-reverse;
+    }
+
+    .sign-up-mobile {
+        display: none;
+    }
+    
+    .sign-up-desktop {
+        display: block;
+    }
+
+}
