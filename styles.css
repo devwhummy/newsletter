@@ -21,11 +21,19 @@
 
 }
 
-body {
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+.main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+h1, label {
+    font-weight: 700;
 }
 
 h1 {
@@ -50,37 +58,73 @@ p {
 
 .info {
     padding: 50px 25px;
+    /* margin-right: 50px; */
 }
 
 .info-check-text img {
     margin-right: 10px;
 }
 
+.info-form {
+    margin-top: 40px;
+}
+
 input, .btn {
+    cursor: pointer;
     display: block;
     width: 100%;
-    margin: 14px 0;
-    font-size: 1rem;
     padding: 10px 10px 10px 16px;
-    font-weight: 600;
     border-radius: 8px;
 }
 
 input {
     outline: none;
     border: 2px solid var(--grey);
+    margin: 10px 0;
+}
+
+label {
+    font-size: 12px;
+    color: var(--charcoalGrey);
 }
 
 .btn {
     border: 0;
     background-color: var(--darkSlateGrey);
     color: var(--white);
+    margin: 20px 0;
+}
+
+.btn:hover {
+    background: var(--tomato);
+}
+
+/* Success */
+span {
+    color: var(--darkSlateGrey);
+}
+
+.success-text h1 {
+    padding-top: 50px;
+}
+
+.success {
+    padding: 100px 20px;
+}
+
+.success-text {
+    padding-bottom: 300px;
 }
 
 @media screen and (min-width: 376px) {
-    body {
+    .main {
         padding: 3rem 5rem;
         flex-direction: row-reverse;
+        background: var(--white);
+    }
+
+    .main {
+        background: var(--charcoalGrey);
     }
 
     .sign-up-mobile {
@@ -89,6 +133,10 @@ input {
     
     .sign-up-desktop {
         display: block;
+    }
+
+    .success {
+        padding: 0;
     }
 
 }
